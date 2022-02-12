@@ -3,8 +3,8 @@
     "target": "es2019",
     "module": "commonJS",
     "allowJs": true, 
-    "outDir": "./Dist",
-    "rootDir": "./src",
+    "outDir": "./dist",
+    "rootDir": ".",
     "removeComments": true,  
     "typeRoots": [
       "./node_modules/@types",
@@ -20,7 +20,7 @@
     "forceConsistentCasingInFileNames": true,
     "baseUrl": ".",
     "paths": {
-      "@/":["*"]
+      "@/":["./src/*"]
     },
   },
   "include": [
