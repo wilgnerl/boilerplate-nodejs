@@ -7,17 +7,27 @@
   "license": "MIT",
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "build": "rimraf dist && babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
     "test": "jest --passWithNoTest --runInBand --no-cache",
-    "test:unit":"jest - --watch --config=jest-unit-config.ts",
-    "test:integration":"jest - --watch --config=jest-integration-config.ts",
-    "test:staged":"jest - --findRelatedTests",
-    "test:ci":"jest - --coverage"
+    "test:unit": "jest - --watch --config=jest-unit-config.ts",
+    "test:integration": "jest - --watch --config=jest-integration-config.ts",
+    "test:staged": "jest - --findRelatedTests",
+    "test:ci": "jest - --coverage"
   },
   "devDependencies": {
+    "@babel/cli": "^7.17.0",
+    "@babel/core": "^7.17.2",
+    "@babel/node": "^7.16.8",
+    "@babel/plugin-proposal-class-properties": "^7.16.7",
+    "@babel/plugin-proposal-decorators": "^7.17.2",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-typescript": "^7.16.7",
     "@types/babel__core": "^7.1.18",
     "@types/jest": "^27.4.0",
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
+    "babel-plugin-module-resolver": "^4.1.0",
+    "babel-plugin-transform-typescript-metadata": "^0.3.2",
     "eslint": "^7.32.0",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.4",
@@ -28,5 +38,8 @@
     "ts-node-dev": "^1.1.8",
     "tsconfig-paths": "^3.12.0",
     "typescript": "^4.5.5"
+  },
+  "dependencies": {
+    "rimraf": "^3.0.2"
   }
 }
