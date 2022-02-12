@@ -8,6 +8,7 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "build": "rimraf dist && babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
+    "start": "node dist/server.js",
     "lint": "eslint --ext .ts",
     "lint:fix": "yarn lint --fix",
     "test": "jest --passWithNoTest --runInBand --no-cache",
