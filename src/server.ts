@@ -1,7 +1,7 @@
-const test = () => {
-  return "Hello";
-};
+export function SayHello (name: string = "World") {
+  return `Hello ${name}`;
+}
 
 console.log(
-  test()
+  SayHello()
 );
