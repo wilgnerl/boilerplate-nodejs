@@ -8,6 +8,8 @@
   "scripts": {
     "dev": "ts-node-dev -r tsconfig-paths/register --inspect --transpile-only --ignore-watch node_modules --respawn src/server.ts",
     "build": "rimraf dist && babel src --extensions \".js,.ts\" --out-dir dist --copy-files",
+    "lint": "eslint --ext .ts",
+    "lint:fix": "yarn lint --fix",
     "test": "jest --passWithNoTest --runInBand --no-cache",
     "test:unit": "jest - --watch --config=jest-unit-config.ts",
     "test:integration": "jest - --watch --config=jest-integration-config.ts",
