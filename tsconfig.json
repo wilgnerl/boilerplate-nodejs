@@ -2,18 +2,28 @@
   "compilerOptions": {
     "target": "es2019",
     "module": "ES6",
+    "allowJs": true, 
     "outDir": "./Dist",
-    "rootDir": "./",
+    "rootDir": "./src",
+    "removeComments": true,  
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types"
+    ],  
     "strict": true,
+    "resolveJsonModule": true,
     "esModuleInterop": true,
+    "moduleResolution": "node",
+    "experimentalDecorators": true,        
+    "emitDecoratorMetadata": true,         
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/":["*"]
+    },
   },
   "include": [
     "src/**/*"
-  ],
-  "exclude": [
-    "tests/**/*",
-    "node_modules"
   ]
 }
